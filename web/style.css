@@ -1,101 +1,9 @@
 body {
-    width: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container {
-    position: relative;
-}
-
-.header {
-    background-color: #00bfa5;
-    height: 28vh; 
-    width: 100%; 
-}
-
-.header-img-wpp {
-    display: flex;
-    flex-direction: row;
-    padding-top: 28px;
-    margin-left: 32vh;
-}
-
-.header .header-img-wpp img {
-   width: 39px; 
-   padding: 0 15px;
-}
-
-.header h1 {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
-    color: #fff;
-    text-transform: uppercase;
-    vertical-align: middle;
-}
-
-.bg-black {
-    background-color: #090e11;
-    height: 72vh;
-    width: 100%;
-}
-
-.section {
-    z-index: 999;
-    background-color: white;
-    width: 55%;
-    position: absolute;
-    margin: 130px auto 80px auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    padding: 64px 60px 110px;
-    border-radius: 3px;
-    box-shadow: 0 0 3em rgba(0, 0, 0, 0.2);
-    display: flex;
-}
-
-
-.section .content-main h2 {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: normal;
-    color: #525252;
-    margin: 0 0 52px 0;
-}
-
-.section .content-main ol li {
-    font-size: 18px;
-    line-height: 28px;
-    color: #4a4a4a;
-    margin-left: -20px;
-    margin-top: 18px;
-}
-
-.section .qrcode {
-    display: flex;
-    flex-direction: column;
-}
-
-.section .qrcode img {
-    max-width: 264px;
-}
-
-
-.section .qrcode .input-checkbox {
-    margin: 0 auto;
-}
-
-.section .qrcode label {
-    font-size: 14px;
-    color: #00000073;
-}
-
-strong {
-    font-weight: 600;
+    /* background-color: #090e11; */
+    background-color: #dddbd1;
+    background-image: linear-gradient(180deg,#dddbd1,#d2dbdc);
 }
 
 a {
@@ -103,3 +11,147 @@ a {
     font-size: 14px;
     text-decoration: none;
 }
+
+strong {
+    font-weight: 600;
+}
+
+.header {
+    background-color: #00bfa5;
+    width: 100%; 
+    height: 14em;
+    
+}
+
+.header h1 {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 14px;
+}
+
+.header-img-wpp {
+    padding: 27px 0;
+    margin: auto;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1050px;
+    min-height: 39px;
+}
+
+.header-img-wpp img {
+    width: 39px;
+    height: 39px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.section {
+    z-index: 2;
+    background-color: #fff;
+    max-width: 930px;
+    border-radius: 3px;
+    box-shadow: 0 17px 50px 0 rgb(0 0 0 / 19%), 0 12px 15px 0 rgb(0 0 0 / 24%);
+    padding: 64px 60px 110px;
+    margin: auto;
+    position: relative;
+    top: -80px;
+}
+
+.section .section-title {
+    margin-bottom: 52px;
+}
+
+.section h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: normal;
+    color: #525252;
+}
+
+.section .flex {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.section ol {
+    padding: 0 0 0 24px;
+    margin: 0;
+}
+
+.section ol li {
+    font-size: 18px;
+    line-height: 28px;
+    color: #4a4a4a;
+}
+
+.section ol li:nth-child(2), .section ol li:nth-child(3) {
+    margin-top: 18px;
+}
+
+.section .flex img {
+    width: 264px;
+    height: 264px;
+}
+
+.content {
+    flex: 1 1 auto;
+    max-width: 100%;
+}
+
+.content span {
+    padding: 0 5px;
+}
+
+.input-checkbox {
+    padding-left: 15px;
+}
+
+.input-checkbox label {
+    font-size: 14px;
+    color: #00000073;
+}
+
+.link {
+    position: absolute;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 1095px){
+    .header-img-wpp {
+        width: 100%;
+        padding: 2em;
+    }
+
+    .section {
+        padding: 58px 52px 110px;
+        margin: 0 40px;
+    }
+}   
+
+@media only screen and (max-width: 660px) {
+    .section {
+        padding: 36px 36px 72px;
+        margin: 0;
+        border-radius: 0px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .content-img {
+        margin: auto;
+        padding-top: 60px;
+    }
+  }
+
+
