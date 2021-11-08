@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="js/login.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon-wpp.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>WhatsApp</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-img-wpp">
+                <img src="images/favicon-wpp.ico" alt="">
+                <h1>WhatsApp Web</h1>
+            </div>
+        </header>
+        <section class="section">
+            <div class="flex">
+                <div class="content">
+                    <h2 class="section-title">Para usar o WhatsApp no seu computador:</h2>
+                    <ol>
+                        <li>Abra o WhatsApp no seu celular.</li>
+                        <li>Toque em <strong>Mais opções</strong> <span class="fas fa-ellipsis-v"></span> ou <strong>Configurações</strong> <span class="fas fa-cog"></span> e selecione <strong>Aparelhos conectados</strong>.</li>
+                        <li>Aponte seu celular para essa tela para capturar o código</li>
+                    </ol>
+                    <span class="link">
+                        <a href="#">Precisa de ajuda para começar?</a>
+                    </span>
+                </div>
+                <div class="content-img">
+                    <img src="images/qr-code.png" alt="">
+                    <div class="input-checkbox">
+                        <input type="checkbox" name="check">
+                        <label for="check">Manter este aparelho conectado</label>
+                    </div>
+                </div>
+            </div>
+            <div class="login">
+              <h1>Login</h1>
+              <div class="text-field">
+                <input type="email" placeholder="Email" id="email" name="email" />
+                <div class="email-field"><span class="email-validation"></span></div>
+              </div>
+              <div class="text-field">
+                <input type="password" placeholder="Senha" id="password" name="password" />
+                <div class="password-field"><span class="password-validation"></span></div>
+                <button class="btn-login">Login</button>
+              </div>
+            </div>
+      
+            <div class="hide-logged">
+              <div class="div-logged"></div>
+              <button class="btn-logout">Sair</button>
+            </div>
+      
+            <div class="hide-search">
+              <input type="text" id="search" placeholder="Pesquise por Categoria" name="pesquisa" />
+              <button class="btn-search">Pesquisar</button>
+            </div>
+      
+            <div class="search-content">
+              <div class="search-container"></div>
+            </div>
+        </div>
+        </section>
+
+        <script src="js/login.js"></script>
+</body>
+</html>
