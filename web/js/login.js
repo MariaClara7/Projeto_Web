@@ -13,7 +13,7 @@ document.querySelector(".btn-login").addEventListener("click", function () {
       writer.innerHTML = "Senha inválida! Mínimo de 3 caracteres.";
       return;
     }
-    if (sessionStorage.getItem("login") == 1) return;
+    if (localStorage.getItem("login") == 1) return;
 
     axios
       .post("https://reqres.in/api/login", {
@@ -63,25 +63,25 @@ document.querySelector(".btn-login").addEventListener("click", function () {
     temp.innerHTML = "Bem-vindo, " + email;
     temp = document.querySelector(".hide-search");
     temp.className = temp.className.replace("hide-search", "search-field");
-    sessionStorage.setItem("login", 1);
-    sessionStorage.setItem("email", email);
+    localStorage.setItem("login", 1);
+    localStorage.setItem("email", email);
   }
   
   function logged() {
-    if (sessionStorage.getItem("login") == 1) {
+    if (localStorage.getItem("login") == 1) {
       var temp = document.querySelector(".login");
       temp.className = temp.className.replace("login", "hide-loggin");
       temp = document.querySelector(".hide-logged");
       temp.className = temp.className.replace("hide-logged", "logged");
       temp = document.querySelector(".div-logged");
-      temp.innerHTML = "Bem-vindo, " + sessionStorage.getItem("email");
+      temp.innerHTML = "Bem-vindo, " + localStorage.getItem("email");
       temp = document.querySelector(".hide-search");
       temp.className = temp.className.replace("hide-search", "search-field");
     }
   }
   
   function logout() {
-    sessionStorage.clear();
+    localStorage.clear();
     var temp = document.querySelector(".hide-loggin");
     temp.className = temp.className.replace("hide-loggin", "login");
     temp = document.querySelector(".logged");
@@ -109,7 +109,7 @@ document.querySelector(".btn-login").addEventListener("click", function () {
   });
   
   logged();
-  
+
   var container = document.querySelector('ul');
   document.querySelector(".btn-search").addEventListener("click", function () {
     var query = document.querySelector('.search').value;
