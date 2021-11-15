@@ -109,3 +109,22 @@ document.querySelector(".btn-login").addEventListener("click", function () {
   });
   
   logged();
+  
+  var container = document.querySelector('ul');
+  document.querySelector(".btn-search").addEventListener("click", function () {
+    var query = document.querySelector('.search').value;
+    axios.get(`https://rickandmortyapi.com/api/character/?name=${query}`)
+         .then(function (res) {
+           console.log(res);
+           var results = res.data.results;
+           for (var index = 0; index < results.length && index < 10; index++) {
+             var li = document.createElement('li');
+                 img = document.createElement('img');
+                 id_img = results[index].id;
+             li.innerHTML = results[index].name;
+             img.src = 'https://rickandmortyapi.com/api/character/avatar/' + id_img + '.jpeg';
+             li.appendChild(img);
+             container.appendChild(li);
+           }
+         })
+  });
