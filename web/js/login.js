@@ -47,7 +47,6 @@ document.getElementById("email").addEventListener(
 document.getElementById("password").addEventListener(
   "keyup", (event) => {
     var senha = document.querySelector("#password").value;
-<<<<<<< HEAD
     var writer = document.querySelector(".password-validation");
     if (senha.length < 3) writer.innerHTML = "Senha inválida! Mínimo de 3 caracteres.";
     else writer.innerHTML = "Senha válida!";
@@ -73,7 +72,6 @@ function cadastrar() {
       .then(function (res){
           console.log(res.data)
           alert("Cadastrado com sucesso");
-=======
     var writer;
 
     if (email.length < 3) {
@@ -104,7 +102,6 @@ function cadastrar() {
         writer.innerHTML = "Login inválido!";
         writer = document.querySelector(".password-validation");
         writer.innerHTML = "";
->>>>>>> 42c46eae5724b3c6a4594b7f19dfb92d0e54373d
       });
 }
 
@@ -228,7 +225,6 @@ function buscar(){
 
       });
 }
-=======
     localStorage.setItem("login", 1);
     localStorage.setItem("email", email);
   }
@@ -294,4 +290,3 @@ function buscar(){
            }
          })
   });
->>>>>>> 42c46eae5724b3c6a4594b7f19dfb92d0e54373d
