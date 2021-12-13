@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="js/login.js"></script> -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/favicon-wpp.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>WhatsApp</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="js/login.js"></script> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon-wpp.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>WhatsApp</title>
 </head>
+
 <body>
+<<<<<<< HEAD
+  <div class="container">
+    <header class="header">
+      <div class="header-img-wpp">
+        <img src="images/favicon-wpp.ico" alt="">
+        <h1>WhatsApp Web</h1>
+      </div>
+    </header>
+    <section class="section">
+      <div class="flex">
+        <div class="content">
+          <h2 class="section-title">Para usar o WhatsApp no seu computador:</h2>
+          <ol>
+            <li>Abra o WhatsApp no seu celular.</li>
+            <li>Toque em <strong>Mais opções</strong> <span class="fas fa-ellipsis-v"></span> ou
+              <strong>Configurações</strong> <span class="fas fa-cog"></span> e selecione <strong>Aparelhos
+                conectados</strong>.</li>
+            <li>Aponte seu celular para essa tela para capturar o código</li>
+          </ol>
+          <span class="link">
+            <a href="#">Precisa de ajuda para começar?</a>
+          </span>
+        </div>
+        <div class="content-img">
+          <img src="images/qr-code.png" alt="">
+          <div class="input-checkbox">
+            <input type="checkbox" name="check">
+            <label for="check">Manter este aparelho conectado</label>
+          </div>
+        </div>
+      </div>
+      <div class="login">
+        <h1>Login</h1>
+        <p>Para realizar o login, entrar com o email: "teste@teste" e senha "123456".</p>
+        <div class="text-field">
+          <input type="email" placeholder="Email" id="email" name="email" />
+          <div class="email-field"><span class="email-validation"></span></div>
     <div class="container">
         <header class="header">
             <div class="header-img-wpp">
@@ -70,8 +109,47 @@
               <div class="search-container"></div>
             </div>
         </div>
-        </section>
+        <div class="text-field">
+          <input type="password" placeholder="Senha" id="password" name="password" />
+          <div class="password-field"><span class="password-validation"></span></div>
+          <button class="btn-login" onclick="entrar()">Login</button>
+        </div>
+      </div>
 
-        <script src="js/login.js"></script>
+      <div class="hide-logged">
+        <div class="div-logged"></div>
+        <button class="btn-logout">Sair</button>
+      </div>
+
+      <div class="hide-search">
+        <h1>Postar um comentário</h1>
+        <p>Digite seu nome e comentário.</p>
+        <input type="text" placeholder="Nome..." name="name" id="name" class="name" />
+        <input type="text" placeholder="Postar comentário..." name="postar" id="post" class="post" />
+        <button class="btn-post" onclick="postar()">Postar</button>
+
+        <div>
+          <ul id="posts"></ul>
+        </div>
+
+        <h1>Pesquisar comentário</h1>
+        <p>Procure pelo nome do usuário para ver seus comentários postados.</p>
+        <input type="text" placeholder="Pesquisar..." name="pesquisa" id="search" class="search" />
+        <button class="btn-search" onclick="buscar()">Pesquisar</button>
+
+        <div>
+          <ul id="lista"></ul>
+        </div>
+
+      </div>
+
+      <div class="search-content">
+        <div class="search-container"></div>
+      </div>
+  </div>
+  </section>
+
+  <script src="js/login.js"></script>
 </body>
+
 </html>
